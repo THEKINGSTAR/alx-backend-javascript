@@ -1,8 +1,13 @@
 export default function createEmployeesObject(departmentName, employees) {
-  const emd_dp = {
-    [departmentName]: employees.map(emp => ({ ...emp })),
+  const empArr = [];
+
+  for (const emp of employees) {
+    empArr.push(emp);
+  }
+
+  const depEmps = {
+    [departmentName]: empArr,
   };
 
-  return emd_dp;
+  return depEmps;
 }
-
