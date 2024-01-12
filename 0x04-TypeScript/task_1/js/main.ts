@@ -56,6 +56,8 @@ interface Directors extends Teacher{
   readonly numberOfReports: number;
 }
 
+// Create a list of teachers
+// Create table and fill it with the list of teachers
 const teachersList: Teacher[] = [teacher1, teacher2, teacher3];
 
 // eslint-disable-next-line no-undef
@@ -74,9 +76,27 @@ teachersList.forEach((teacher) => {
   cell2.textContent = teacher.lastName;
   cell3.textContent = teacher.fullTimeEmployee.toString();
   cell4.textContent = teacher.location;
-  cell5.textContent = teacher.yearsOfExperience.toString();
-  cell6.textContent = teacher.numberOfReports.toString();
+  // cell5.textContent = teacher.yearsOfExperience.toString();
+  cell5.textContent = teacher.yearsOfExperience?.toString() || ''; // Handle optional property
+  // cell6.textContent = teacher.numberOfReports.toString();
+  cell6.textContent = (teacher as Directors).numberOfReports?.toString() || ''; // Handle optional property
 });
 
 // eslint-disable-next-line no-undef
 document.body.appendChild(table);
+
+/*
+Write a function printTeacher:
+
+It accepts two arguments firstName and lastName
+It returns the first letter of the firstName and the full lastName
+Example: printTeacher("John", "Doe") -> J. Doe
+*/
+function printTeacher(firstName: string, lastName: string): string {
+  return (`${firstName[0]}, ${lastName}`);
+}
+// Write an interface for the function named printTeacherFunction
+// eslint-disable-next-line @typescript-eslint/class-name-casing
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
