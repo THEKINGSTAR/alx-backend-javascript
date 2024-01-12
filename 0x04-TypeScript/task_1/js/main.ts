@@ -35,7 +35,7 @@ const teacher2: Teacher = {
 console.log(teacher2);
 
 const teacher3: Teacher = {
-  firstName: 'John',
+  firstName: 'Jkohn',
   fullTimeEmployee: false,
   lastName: 'Doe',
   location: 'London',
@@ -87,7 +87,6 @@ document.body.appendChild(table);
 
 /*
 Write a function printTeacher:
-
 It accepts two arguments firstName and lastName
 It returns the first letter of the firstName and the full lastName
 Example: printTeacher("John", "Doe") -> J. Doe
@@ -95,8 +94,53 @@ Example: printTeacher("John", "Doe") -> J. Doe
 function printTeacher(firstName: string, lastName: string): string {
   return (`${firstName[0]}, ${lastName}`);
 }
+
 // Write an interface for the function named printTeacherFunction
-// eslint-disable-next-line @typescript-eslint/class-name-casing
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
+}
+
+// Example: printTeacher("John", "Doe") -> J. Doe
+const result = printTeacher("John", "Doe");
+console.log(result);
+
+//------------------------------------------------------------------------------------------
+// 4. Writing a class
+// Write a Class named StudentClass:
+class StudentClass {
+// Properties
+  firstName: (string);
+  lastName: (string);
+
+  // The constructor accepts firstName(string) and lastName(string) arguments
+  // Constructor
+  constructor (firstName: (string), lastName: (string)) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // The class has a method named workOnHomework that return the string Currently working
+  // Method
+  workOnHomework(): string {
+    return "Currently working"; 
+  }
+
+  // The class has a method named displayName. It returns the firstName of the student
+  // Method
+  displayName(): string {
+    return `${this.firstName}`;
+  }
+}
+
+// The constructor of the class should be described through an Interface
+interface ClassConstructorInterface {
+  new (firstName: string, lastName: string): StudentClass;
+}
+// The class should be described through an Interface
+interface StudentClassInterface {
+  firstName : string;
+  lastName : string;
+
+  worOnHomework(): string;
+  displayName(): string;
 }
