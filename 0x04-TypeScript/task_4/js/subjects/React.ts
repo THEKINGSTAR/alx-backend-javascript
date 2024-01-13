@@ -1,12 +1,15 @@
+// ./js/subjexts/React.ts
 /*
 Create a file React.ts and write a React Class in the same namespace.
 */
 namespace Subject{
-    class React {
-        // Add a new attribute experienceTeachingReact? (number) to the Teacher interface
-        interface Teacher{
-            experienceTeachingReact?: (number);
-        }
+     // Add a new attribute experienceTeachingReact? (number) to the Teacher interface
+     interface Teacher{
+        experienceTeachingReact?: (number);
+    }
+
+    export class React extends Subject{
+       
 
         // In the class, write a method named getRequirements that will return a string Here is the list of requirements for React
         getRequirements(): string { 
@@ -25,5 +28,9 @@ namespace Subject{
         }
         
         }
+        // create and export a constant react for React Subjects
+        // export const react = new React();
     }
+
+}
 
