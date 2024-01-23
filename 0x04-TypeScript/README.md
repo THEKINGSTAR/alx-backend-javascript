@@ -1,46 +1,39 @@
 
-Curriculum
-Short Specializations
-Average: 25.44%
-0x04. Typescript
-JavaScript
-TypeScript
- By: Johann Kerbrat, Engineering Manager at Uber Works
- Weight: 1
- Project will start Jan 10, 2024 5:00 AM, must end by Jan 11, 2024 5:00 AM
- Manual QA review must be done (request it when you are done with the project)
+# ```0x04. Typescript```
+```JavaScript```
+```TypeScript```
+ 
+## Resources
+## ```Read or watch:```
 
+>- TypeScript in 5 minutes
+>- TypeScript documentation
+## ```Learning Objectives```
+### At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-Resources
-Read or watch:
+>- Basic types in Typescript
+>- Interfaces, Classes, and functions
+>- How to work with the DOM and Typescript
+>- Generic types
+>- How to use namespaces
+>- How to merge declarations
+>- How to use an ambient Namespace to import an external library
+>- Basic nominal typing with Typescript
 
-TypeScript in 5 minutes
-TypeScript documentation
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+## ```Requirements```
+>- Allowed editors: ```vi```, ```vim```, ```emacs```, ```Visual Studio Code```
+>- All your files should end with a new line
+>- All your files will be transpiled on ```Ubuntu 18.04```
+## ```>- Your TS scripts will be checked with ```jest``` (version 24.9.* ) (>- A ```README.md``` )```file, at the root of the folder of the project, is mandatory
+>- Your code should use the ts extension when possible
+>- The Typescript compiler should not show any warning or error when compiling your code
 
-Basic types in Typescript
-Interfaces, Classes, and functions
-How to work with the DOM and Typescript
-Generic types
-How to use namespaces
-How to merge declarations
-How to use an ambient Namespace to import an external library
-Basic nominal typing with Typescript
-Requirements
-Allowed editors: vi, vim, emacs, Visual Studio Code
-All your files should end with a new line
-All your files will be transpiled on Ubuntu 18.04
-Your TS scripts will be checked with jest (version 24.9.* )
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the ts extension when possible
-The Typescript compiler should not show any warning or error when compiling your code
-Configuration Files
-Please use these files for the following tasks
+## ```Configuration Files```
+#### Please use these files for the following tasks
 
-package.json
-Click to show/hide file contents
+>- ## ```package.json```
 
+```ts
 {
   "name": "typescript_dependencies",
   "version": "1.0.0",
@@ -73,10 +66,9 @@ Click to show/hide file contents
     "webpack-dev-server": "^3.8.2"
   }
 }
-
-.eslintrc.js
-Click to show/hide file contents
-
+```
+>- ## ```.eslintrc.js```
+```js
 module.exports =  {
   parser:  '@typescript-eslint/parser',
   extends:  [
@@ -89,10 +81,9 @@ module.exports =  {
   rules:  {
   },
 };
-
-tsconfig.json
-Click to show/hide file contents
-
+```
+>- ## ```tsconfig.json```
+```
 {
   "compilerOptions": {
     "outDir": "./dist/",
@@ -105,10 +96,9 @@ Click to show/hide file contents
         "skipLibCheck": true
   }
 }
-
-webpack.config.js
-Click to show/hide file contents
-
+```
+>-  ## ```webpack.config.js```
+```js
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -146,39 +136,43 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   }
 };
+```
+## ```Tasks```
 
-Tasks
-0. Creating an interface for a student
-mandatory
-Copy the following configuration files (provided above) into the task_0 directory: package.json, .eslintrc.js, tsconfig.json, webpack.config.js
+## ```0. Creating an interface for a student (mandatory)```
+### Copy the following configuration files (provided above) into the ```task_0``` directory: ```package.json```, ```.eslintrc.js```, ```tsconfig.json```, ```webpack.config.js```
 
-Write your code in the main.ts file:
+>- Write your code in the main.ts file:
 
-Write an interface named Student that accepts the following elements: firstName(string), lastName(string), age(number), and location(string)
-Create two students, and create an array named studentsList containing the two variables
+>- Write an interface named Student that accepts the following elements: ```firstName(string)```, ```lastName(string)```, ```age(number)```, and ```location(string)```
+>- Create two students, and create an array named studentsList containing the two variables
 Using Vanilla Javascript, render a table and for each elements in the array, append a new row to the table
-Each row should contain the first name of the student and the location
-Requirements:
+>- Each row should contain the first name of the student and the location
 
-When running, Webpack should return No type errors found.
-Every variable should use TypeScript when possible.
-Repo:
+>- Requirements:
+```
+   When running, Webpack should return No type errors found.
+   Every variable should use TypeScript when possible.
+```
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_0/js/main.ts, task_0/package.json, task_0/.eslintrc.js, task_0/tsconfig.json, task_0/webpack.config.js
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_0/js/main.ts, task_0/package.json, task_0/.eslintrc.js, task_0/tsconfig.json, task_0/webpack.config.js
   
-1. Let's build a Teacher interface
-mandatory
-Create a directory task_1 and copy these configuration files into this folder: package.json, tsconfig.json, webpack.config.js
+## ```1. Let's build a Teacher interface (mandatory)```
+### Create a directory task_1 and copy these configuration files into this folder: `package.json`, ```tsconfig.json```, ```webpack.config.js```
 
-firstName(string) and lastName(string). These two attributes should only be modifiable when a Teacher is first initialized
-fullTimeEmployee(boolean) this attribute should always be defined
-yearsOfExperience(number) this attribute is optional
-location(string) this attribute should always be defined
-Add the possibility to add any attribute to the Object like contract(boolean) without specifying the name of the attribute
-Example:
+>- ```firstName(string) ```and ```lastName(string)```. These two attributes should only be modifiable when a Teacher is first initialized
+>- ```fullTimeEmployee(boolean)``` this attribute should always be defined
+>- ```yearsOfExperience(number)``` this attribute is optional
+>- ```location(string)``` this attribute should always be defined
+>- Add the possibility to add any attribute to the Object like ```contract(boolean)``` without specifying the name of the attribute
 
+### ```Example:```
+
+```ts
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
@@ -196,14 +190,15 @@ console.log(teacher3);
 // fullTimeEmployee: false
 // lastName: "Doe"
 // location: "London"
-Repo:
+```
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_1/js/main.ts, task_1/webpack.config.js, task_1/tsconfig.json, task_1/package.json
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_1/js/main.ts, task_1/webpack.config.js, task_1/tsconfig.json, task_1/package.json
  
-2. Extending the Teacher class
-mandatory
+## ```2. Extending the Teacher class (mandatory)```
 Write an interface named Directors that extends Teacher. It requires an attribute named numberOfReports(number)
 
 Example:
@@ -224,14 +219,14 @@ console.log(director1);
 // lastName: "Doe"
 // location: "London"
 // numberOfReports: 17
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_1/js/main.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_1/js/main.ts
  
-3. Printing teachers
-mandatory
+## ```3. Printing teachers (mandatory)```
 Write a function printTeacher:
 
 It accepts two arguments firstName and lastName
@@ -239,14 +234,14 @@ It returns the first letter of the firstName and the full lastName
 Example: printTeacher("John", "Doe") -> J. Doe
 Write an interface for the function named printTeacherFunction.
 
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_1/js/main.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_1/js/main.ts
  
-4. Writing a class
-mandatory
+## ```4. Writing a class (mandatory)```
 Write a Class named StudentClass:
 
 The constructor accepts firstName(string) and lastName(string) arguments
@@ -259,14 +254,14 @@ Requirements:
 You can reuse the Webpack configuration from the previous exercise to compile the code.
 When running npm run build, no TypeScript error should be displayed.
 Every variable should use TypeScript when possible.
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_1/js/main.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_1/js/main.ts
  
-5. Advanced types Part 1
-mandatory
+## ```5. Advanced types Part 1 (mandatory)```
 Create the DirectorInterface interface with the 3 expected methods:
 
 workFromHome() returning a string
@@ -293,22 +288,27 @@ It can return either a Director or a Teacher instance
 It accepts 1 arguments:
 salary(either number or string)
 if salary is a number and less than 500 - It should return a new Teacher. Otherwise it should return a Director
-Expected result:
 
+```
+Expected result:
+```
+
+```sh
 console.log(createEmployee(200));
 Teacher
 console.log(createEmployee(1000));
 Director
 console.log(createEmployee('$500'));
 Director
-Repo:
+```
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_2/js/main.ts, task_2/webpack.config.js, task_2/tsconfig.json, task_2/package.json
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_2/js/main.ts, task_2/webpack.config.js, task_2/tsconfig.json, task_2/package.json
  
-6. Creating functions specific to employees
-mandatory
+## ```6. Creating functions specific to employees (mandatory)```
 Write a function isDirector:
 
 it accepts employee as an argument
@@ -324,14 +324,14 @@ executeWork(createEmployee(200));
 Getting to work
 executeWork(createEmployee(1000));
 Getting to director tasks
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_2/js/main.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_2/js/main.ts
  
-7. String literal types
-mandatory
+## ```7. String literal types (mandatory)```
 Write a String literal type named Subjects allowing a variable to have the value Math or History only. Write a function named teachClass:
 
 it takes todayClass as an argument
@@ -343,14 +343,14 @@ teachClass('Math');
 Teaching Math
 teachClass('History');
 Teaching History
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_2/js/main.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_2/js/main.ts
   
-8. Ambient Namespaces
-mandatory
+## ```8. Ambient Namespaces (mandatory)```
 Create a directory called task_3 and copy these configuration files into it: package.json, webpack.config.js, tsconfig.json.
 
 The first part of will require that you build an interface and a type. Inside a file named interface.ts:
@@ -414,14 +414,14 @@ When running npm run build, no TypeScript error should be displayed.
 Every variable should use TypeScript when possible.
 The main file and the ambient file should both import the types defined in the interface file.
 You can easily test your ambient file by looking at the intellisense of your IDE when using the 3rd party functions.
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_3/js/main.ts, task_3/js/interface.ts, task_3/js/crud.d.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: task_3/js/main.ts, task_3/js/interface.ts, task_3/js/crud.d.ts
  
-9. Namespace & Declaration merging
-mandatory
+## ```9. Namespace & Declaration merging (mandatory)```
 Create a new directory task_4 and copy the above tsconfig.json and put this package.json in there
 
 {
@@ -477,14 +477,14 @@ Add a new attribute experienceTeachingJava? (number) to the Teacher interface
 In the class, write a method named getRequirements that will return a string Here is the list of requirements for Java
 Write a method named getAvailableTeacher that will return a string Available Teacher: <first name of teacher>
 If the teacher doesn’t have any experience in teaching Java, then the method should return a string No available teacher
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_4/package.json, task_4/tsconfig.json, task_4/js/subjects/Cpp.ts, task_4/js/subjects/Java.ts, task_4/js/subjects/React.ts, task_4/js/subjects/Subject.ts, task_4/js/subjects/Teacher.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: ```task_4/package.json```, ```task_4/tsconfig.json```, ```task_4/js/subjects/Cpp.ts```, ```task_4/js/subjects/Java.ts```, ```task_4/js/subjects/React.ts```, ```task_4/js/subjects/Subject.ts```, ```task_4/js/subjects/Teacher.ts```
  
-10. Update task_4/js/main.ts
-mandatory
+## ```10. Update task_4/js/main.ts (mandatory)```
 create and export a constant cpp for Cpp Subjects
 create and export a constant java for Java Subjects
 create and export a constant react for React Subjects
@@ -492,14 +492,14 @@ create and export one Teacher object cTeacher with experienceTeachingC = 10
 for Cpp subject, log to the console C++, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher and print the strings they return
 for Java subject, log to the console Java, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
 for React subject, log to the console React, set cTeacher as the teacher, call the two methods getRequirements and getAvailableTeacher, and print the strings they return
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_4/js/main.ts
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File: ```task_4/js/main.ts```
  
-11. Brand convention & Nominal typing
-mandatory
+## ```11. Brand convention & Nominal typing (mandatory)```
 Create a directory task_5 and copy these configuration files into the root of task_5: package.json, tsconfig.json, webpack.config.js
 
 Create two interfaces MajorCredits and MinorCredits in task_5/js/main.ts:
@@ -511,11 +511,14 @@ Create two functions named sumMajorCredits and sumMinorCredits in task_5/js/main
 Each function takes two arguments subject1 and subject2
 sumMajorCredits returns MajorCredits value and sumMinorCredits returns MinorCredits value
 Each function sums the credits of the two subjects
-Repo:
 
-GitHub repository: alx-backend-javascript
-Directory: 0x04-TypeScript
-File: task_5/js/main.ts, task_5/package.json, task_5/webpack.config.js, task_5/tsconfig.json
+## ```Repo:```
+
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x04-TypeScript```
+>- File:``` task_5/js/main.ts```, ```task_5/package.json```,``` task_5/webpack.config.js```, ```task_5/tsconfig.json```
  
-Copyright © 2024 ALX, All rights reserved.
+
+
+## ```Copyright © 2024 ALX, All rights reserved.```
 

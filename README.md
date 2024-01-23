@@ -1,9 +1,9 @@
-# alx-backend-javascript
+# ```alx-backend-javascript```
 ``` ALX - SE, Short Specializations Curriculum dates: Started the 01/01/2024 Ending the 04/05/2024 ```
 
 
-## Requirements
-## General
+## ```Requirements```
+## ```General```
 >- All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
 >- Allowed editors: vi, vim, emacs, Visual Studio Code
 >- All your files should end with a new line
@@ -13,7 +13,7 @@
 >- Your code will be analyzed using the linter ESLint along with specific rules that we’ll provide
 >- All of your functions must be exported
 
-## Setup
+## ```Setup```
 >- Install NodeJS 12.11.x
 (in your home directory):
 
@@ -30,12 +30,12 @@ $ npm -v
 ```
 
 ## ```Install Jest, Babel, and ESLint```
-### in your project directory, install Jest, Babel and ESList by using the supplied package.json and run npm install.
+>- ### in your project directory, install Jest, Babel and ESList by using the supplied package.json and run npm install.
 
 ## ```Configuration files```
 ### Add the files below to your project directory
 
->- ## package.json
+>- ## ```package.json```
 ```json
 
 {
@@ -60,7 +60,7 @@ $ npm -v
 
 ```
 
->- ## babel.config.js
+>- ## ```babel.config.js```
 
 ```json
 
@@ -79,7 +79,7 @@ module.exports = {
 
 ```
 
->- ## .eslintrc.js
+>- ## ```.eslintrc.js```
 
 ```json
 
@@ -121,9 +121,20 @@ module.exports = {
 
 ```
 
->- ## Finally…
+## ```Finally…```
 
-### Don’t forget to run npm install from the terminal of your project folder to install all necessary project dependencies.
+>- ### Don’t forget to run npm install from the terminal of your project folder to install all necessary project dependencies.
 
+# ```Projects : ```
+>- [js-basic](0x00-ES6_basic/)
+>- [js-promise](0x01-ES6_promise/)
+>- [TypeScript](0x04-TypeScript/)
+
+
+
+
+<dev style='text-align:center;'>  
 
 ### ```Copyright © 2024 ALX, All rights reserved.```
+
+<dev/>
