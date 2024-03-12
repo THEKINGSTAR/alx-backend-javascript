@@ -191,7 +191,7 @@ bob@dylan:~$
   >- ```students``` (array of Strings)
 
 >- Make sure to verify the type of attributes during object creation
->- Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
+>- Each attribute must be stored in an “underscore” attribute version (ex: ```name``` is stored in ```_name```)
 >- Implement a getter and setter for each attribute.
 
 ```shell

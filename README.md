@@ -127,7 +127,8 @@ module.exports = {
 
 # ```Projects : ```
 >- [js-basic](0x00-ES6_basic/)
->- [js-promise](0x01-ES6_promise/)
+>- [ES6_classes](0x02-ES6_classes/)
+>- [ES6 data manipulation](0x03-ES6_data_manipulation/)
 >- [TypeScript](0x04-TypeScript/)
 
 
