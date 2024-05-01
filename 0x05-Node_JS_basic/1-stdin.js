@@ -8,6 +8,7 @@ function welcoming() {
       console.log(`Your name is: ${trimmedInput}`);
       process.stdin.pause();
     } else {
+      console.log(`Your name is: ${trimmedInput}`);
       console.log('This important software is now closing');
     }
   });
