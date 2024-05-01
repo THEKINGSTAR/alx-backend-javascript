@@ -4,9 +4,12 @@ function welcoming() {
   process.stdin.setEncoding('utf-8');
   process.stdin.on('data', (input) => {
     const trimmedInput = input.trim();
-    console.log(`Your name is: ${trimmedInput}`);
-    process.stdin.pause();
-    console.log('This important software is now closing');
+    if (process.stdin.isTTY) {
+      console.log(`Your name is: ${trimmedInput}`);
+      process.stdin.pause();
+    } else {
+      console.log('This important software is now closing');
+    }
   });
 }
 
