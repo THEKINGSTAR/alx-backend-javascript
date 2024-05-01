@@ -12,6 +12,13 @@ function welcoming() {
       console.log('This important software is now closing');
     }
   });
+
+  process.stdin.on('end', () => {
+    if (process.stdin.isTTY) {
+      console.log('This important software is now closing');
+      process.exit();
+    }
+  });
 }
 
 module.exports = welcoming;
