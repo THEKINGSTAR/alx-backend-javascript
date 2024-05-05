@@ -8,6 +8,6 @@ For every resolution, log Got a response from the API to the console
 */
 export default function handleResponseFromAPI(promise) {
   return promise.then(() => ({ status: 200, body: 'auccess' }))
-    .catch(() => Error({}))
+    .catch(() => Error())
     .finally(() => console.log('Got a response from the API'));
 }
