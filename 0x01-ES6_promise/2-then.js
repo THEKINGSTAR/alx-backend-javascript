@@ -16,10 +16,10 @@ export default function handleResponseFromAPI(promise) {
   });
 }
 handleResponseFromAPI(true)
-  .then((response) => {
-    console.log('Got a response from the API');
-    return (response);
-  })
+  .then((response) => response)
   .catch((error) => {
     console.log('Error', error);
+  })
+  .finally(() => {
+    console.log('Got a response from the API');
   });
