@@ -3,9 +3,10 @@
 
 ```JavaScript```
 ```ES6```
- 
 
-## Resources
+ ![alt text](js-promises.png)
+
+# Resources
 ## Read or watch:
 
 > - Promise
@@ -26,15 +27,16 @@
 
 ## Requirements
 > - All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
-> - Allowed editors: vi, vim, emacs, Visual Studio Code
-> - All your files should end with a new line (> - A README.md file, at the root of the ## ```folder )of the project, is mandatory```
-> - Your code should use the js extension
-> - Your code will be tested using Jest and the command npm run test
+> - Allowed editors: ```vi```, ```vim```, ```emacs```, ```Visual Studio Code```
+> - All your files should end with a new line 
+> - A ```README.md``` file, at the root of the folder of the project, is mandatory
+> - Your code should use the ```js``` extension
+> - Your code will be tested using ```Jest``` and the command ```npm run test```
 > - Your code will be verified against lint using ESLint
 > - All of your functions must be exported
 
-## Setup
-> - Install NodeJS 12.11.x
+# Setup
+## Install NodeJS 12.11.x
 (in your home directory):
 
 ```shell
@@ -53,6 +55,9 @@ $ npm -v
 ### ```Add the files below to your project directory```
 
 ### ```package.json```
+
+<details>
+  <summary>Click to show/hide file contents</summary>
 
 ```json
 {
@@ -74,10 +79,14 @@ $ npm -v
     "jest": "^24.9.0"
   }
 }
-
 ```
+</details>
 
 ### ```babel.config.js```
+
+<details>
+  <summary>Click to show/hide file contents</summary>
+
 
 ```js
 module.exports = {
@@ -94,9 +103,14 @@ module.exports = {
 };
 
 ```
+</details>
 
 ### ```utils.js```
 Use when you get to tasks requiring ```uploadPhoto``` and ```createUser```.
+
+<details>
+  <summary>Click to show/hide file contents</summary>
+
 
 ```js
 export function uploadPhoto() {
@@ -115,8 +129,13 @@ export function createUser() {
 }
 
 ```
+</details>
 
 ### ```.eslintrc.js```
+
+<details>
+  <summary>Click to show/hide file contents</summary>
+
 
 ```js
 module.exports = {
@@ -156,6 +175,9 @@ module.exports = {
 };
 
 ```
+
+</details>
+
 ## and…
 
 
@@ -181,7 +203,7 @@ Don’t forget to run ```$ npm install``` when you have the ```package.json```
 # ```Tasks```
 
 ## ```0. Keep every promise you make and only make promises you can keep (mandatory)```
-### Return a Promise using this prototype function getResponseFromAPI()
+### Return a Promise using this prototype function ```getResponseFromAPI()```
 
 ```shell
 bob@dylan:~$ cat 0-main.js
@@ -310,13 +332,14 @@ function signUpUser(firstName, lastName) {
 }
 ```
 
->- ```That returns a resolved promise with this object:```
+* ```That returns a resolved promise with this object:```
 
 ```js
 {
   firstName: value,
   lastName: value,
 }
+```
 
 ```shell
 bob@dylan:~$ cat 4-main.js
@@ -512,6 +535,50 @@ bob@dylan:~$
 >- GitHub repository: ```alx-backend-javascript```
 >- Directory: ```0x01-ES6_promise```
 >- File: ```9-try.js```
-     
+
+
+## ```10. Await / Async (#advanced)```
+
+Import ```uploadPhoto``` and ```createUser``` from ```utils.js```
+
+Write an async function named ```asyncUploadUser``` that will call these two functions and return an object with the following format:
+```js
+
+{
+  photo: response_from_uploadPhoto_function,
+  user: response_from_createUser_function,
+}
+```
+If one of the async function fails, return an empty object. Example:
+```js
+{
+  photo: null,
+  user: null,
+}
+```
+```shell
+bob@dylan:~$ cat 100-main.js
+import asyncUploadUser from "./100-await";
+
+const test = async () => {
+    const value = await asyncUploadUser();
+    console.log(value);
+};
+
+test();
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 100-main.js 
+{
+  photo: { status: 200, body: 'photo-profile-1' },
+  user: { firstName: 'Guillaume', lastName: 'Salva' }
+}
+bob@dylan:~$ 
+```
+
+## ```Repo:```
+>- GitHub repository: ```alx-backend-javascript```
+>- Directory: ```0x01-ES6_promise```
+>- File: ```100-await.js```
 
 ## ```Copyright © 2024 ALX, All rights reserved.```
