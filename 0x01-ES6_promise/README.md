@@ -298,14 +298,14 @@ bob@dylan:~$
 >- File: ```2-then.js```
      
 ## ```3. Handle multiple successful promises (mandatory)```
-### In this file, import ```uploadPhoto``` and createUser from``` utils.js```
+In this file, import ```uploadPhoto``` and ```createUser``` from``` utils.js```
 
->- Knowing that the functions in ```utils.js``` return promises, use the prototype below to collectively resolve all promises and log ```body firstName lastName``` to the console.
+Knowing that the functions in ```utils.js``` return promises, use the prototype below to collectively resolve all promises and log ```body firstName lastName``` to the console.
 
 ```js
 function handleProfileSignup()
 ```
->- In the event of an error, log ```Signup system offline``` to the console
+In the event of an error, log ```Signup system offline``` to the console
 
 ```shell
 bob@dylan:~$ cat 3-main.js
@@ -331,7 +331,7 @@ function signUpUser(firstName, lastName) {
 }
 ```
 
-* ```That returns a resolved promise with this object:```
+That returns a resolved promise with this object:
 
 ```js
 {
@@ -360,9 +360,9 @@ bob@dylan:~$
 >- File: ```4-user-promise.js```
      
 ## ```5. Reject the promises (mandatory)```
-### Write and export a function named ```uploadPhoto```. It should accept one argument ```fileName``` (string).
+Write and export a function named ```uploadPhoto```. It should accept one argument ```fileName``` (string).
 
->- The function should return a Promise rejecting with an Error and the string ``` $fileName cannot be processed```
+The function should return a Promise rejecting with an Error and the string ``` $fileName cannot be processed```
 
 ```js
 export default function uploadPhoto(filename) {
@@ -390,9 +390,9 @@ bob@dylan:~$
 >- File: ```5-photo-reject.js```
      
 ## ```6. Handle multiple promises (mandatory)```
-### Import ```signUpUser``` from ```4-user-promise.js ```and ```uploadPhoto``` from ```5-photo-reject.js```.
+Import ```signUpUser``` from ```4-user-promise.js ```and ```uploadPhoto``` from ```5-photo-reject.js```.
 
->- Write and export a function named ```handleProfileSignup```. It should accept three arguments ```firstName```(string), ```lastName```(string), and ```fileName```(string). The function should call the two other functions. When the promises are all settled it should return an array with the following structure:
+Write and export a function named ```handleProfileSignup```. It should accept three arguments ```firstName```(string), ```lastName```(string), and ```fileName```(string). The function should call the two other functions. When the promises are all settled it should return an array with the following structure:
 
 ```shell
 [
@@ -422,9 +422,9 @@ bob@dylan:~$
 >- File: ```6-final-user.js```
      
 ## ```7. Load balancer (mandatory)```
-### Write and export a function named ```loadBalancer```. It should accept two arguments ```chinaDownload``` (Promise) and ```USDownload``` (Promise).
+Write and export a function named ```loadBalancer```. It should accept two arguments ```chinaDownload``` (Promise) and ```USDownload``` (Promise).
 
->- The function should return the value returned by the promise that resolved the first.
+The function should return the value returned by the promise that resolved the first.
 
 ```js
 export default function loadBalancer(chinaDownload, USDownload) {
@@ -463,6 +463,7 @@ Downloading from UK is faster
 Downloading from FR is faster
 bob@dylan:~$ 
 ```
+
 ## ```Repo:```
 
 >- GitHub repository: ```alx-backend-javascript```
@@ -470,7 +471,7 @@ bob@dylan:~$
 >- File: ```7-load_balancer.js```
      
 ## ```8. Throw error / try catch (mandatory)```
-### Write a function named ```divideFunction``` that will accept two arguments: ```numerator``` (Number) and ```denominator``` (Number).
+Write a function named ```divideFunction``` that will accept two arguments: ```numerator``` (Number) and ```denominator``` (Number).
 
 ### When the ```denominator``` argument is equal to 0, the function should throw a new error with the message cannot ```divide by 0```. Otherwise it should return the numerator divided by the denominator.
 
@@ -501,11 +502,11 @@ bob@dylan:~$
 >- File: ```8-try.js```
      
 ## ```9. Throw an error (mandatory)```
-### Write a function named ```guardrail``` that will accept one argument ```mathFunction``` (Function).
+Write a function named ```guardrail``` that will accept one argument ```mathFunction``` (Function).
 
->- This function should create and return an array named ```queue```.
+This function should create and return an array named ```queue```.
 
->- When the ```mathFunction``` function is executed, the value returned by the function should be appended to the queue. If this function throws an error, the error message should be appended to the queue. In every case, the message ```Guardrail was processed``` should be added to the queue.
+When the ```mathFunction``` function is executed, the value returned by the function should be appended to the queue. If this function throws an error, the error message should be appended to the queue. In every case, the message ```Guardrail was processed``` should be added to the queue.
 
 ```Example:```
 ```shell
