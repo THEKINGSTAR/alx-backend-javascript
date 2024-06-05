@@ -200,13 +200,12 @@ bob@dylan:~$
 ## ```1. Using Process stdin (mandatory)```
 Create a program named ```1-stdin.js``` that will be executed through command line:
 
-It should display the message ```Welcome to Holberton School, what is your name?``` (followed by a new line)
-The user should be able to input their name on a new line
-The program should display ```Your name is: INPUT```
+* It should display the message ```Welcome to Holberton School, what is your name?``` (followed by a new line)
+* The user should be able to input their name on a new line
+* The program should display ```Your name is: INPUT```
 When the user ends the program, it should display ```This important software is now closing``` (followed by a new line)
-Requirements:
-
-Your code will be tested through a child process, make sure you have everything you need for that
+### ```Requirements:```
+* Your code will be tested through a child process, make sure you have everything you need for that
 
 ```shell
 bob@dylan:~$ node 1-stdin.js 
@@ -228,12 +227,12 @@ bob@dylan:~$
 ## ```2. Reading a file synchronously with Node JS (mandatory)```
 Using the database ```database.csv``` (provided in project description), create a function ```countStudents``` in the file ```2-read_file.js```
 
-Create a function named ```countStudents```. It should accept a path in argument
-The script should attempt to read the database file synchronously
-If the database is not available, it should throw an error with the text ```Cannot load the database```
-If the database is available, it should log the following message to the console``` Number of students: NUMBER_OF_STUDENTS```
-It should log the number of students in each field, and the list with the following format: ```Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES```
-CSV file can contain empty lines (at the end) - and they are not a valid student!
+* Create a function named ```countStudents```. It should accept a path in argument
+* The script should attempt to read the database file synchronously
+* If the database is not available, it should throw an error with the text ```Cannot load the database```
+* If the database is available, it should log the following message to the console``` Number of students: NUMBER_OF_STUDENTS```
+* It should log the number of students in each field, and the list with the following format: ```Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES```
+* CSV file can contain empty lines (at the end) - and they are not a valid student!
 
 ```shell
 bob@dylan:~$ cat 2-main_0.js
@@ -268,13 +267,13 @@ bob@dylan:~$
 ## ```3. Reading a file asynchronously with Node JS (mandatory)```
 Using the database ```database.csv```(provided in project description), create a function ```countStudents``` in the file ```3-read_file_async.js```
 
-Create a function named ```countStudents```. It should accept a path in argument (same as in ```2-read_file.js```)
-The script should attempt to read the database file asynchronously
-The function should return a Promise
-If the database is not available, it should throw an error with the text ```Cannot load the database```
-If the database is available, it should log the following message to the console ```Number of students: NUMBER_OF_STUDENTS```
-It should log the number of students in each field, and the list with the following format: ```Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES```
-CSV file can contain empty lines (at the end) - and they are not a valid student!
+* Create a function named ```countStudents```. It should accept a path in argument (same as in ```2-read_file.js```)
+* The script should attempt to read the database file asynchronously
+* The function should return a Promise
+* If the database is not available, it should throw an error with the text ```Cannot load the database```
+* If the database is available, it should log the following message to the console ```Number of students: NUMBER_OF_STUDENTS```
+* It should log the number of students in each field, and the list with the following format: ```Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES```
+* CSV file can contain empty lines (at the end) - and they are not a valid student!
 
 ```shell
 bob@dylan:~$ cat 3-main_0.js
@@ -311,10 +310,11 @@ Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaum
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 Done!
 bob@dylan:~$ 
-Tips:
-
-Using asynchronous callbacks is the preferred way to write code in Node to avoid blocking threads
 ```
+
+Tips:
+* Using asynchronous callbacks is the preferred way to write code in Node to avoid blocking threads
+
 ## ```Repo:```
 >- GitHub repository: ```alx-backend-javascript```
 >- Directory: ```0x05-Node_JS_basic```
@@ -323,9 +323,9 @@ Using asynchronous callbacks is the preferred way to write code in Node to avoid
 ## ```4. Create a small HTTP server using Node's HTTP module (mandatory)```
 In a file named ```4-http.js```, create a small HTTP server using the ```http``` module:
 
-It should be assigned to the variable ```app``` and this one must be exported
-HTTP server should listen on port 1245
-Displays ```Hello Holberton School!``` in the page body for any endpoint as plain text
+* It should be assigned to the variable ```app``` and this one must be exported
+* HTTP server should listen on port 1245
+* Displays ```Hello Holberton School!``` in the page body for any endpoint as plain text
 
 ```In terminal 1:```
 
@@ -352,12 +352,12 @@ bob@dylan:~$
 ```5. Create a more complex HTTP server using Node's HTTP module ## (mandatory)```
 In a file named ```5-http.js```, create a small HTTP server using the ```http``` module:
 
-It should be assigned to the variable app and this one must be exported
-HTTP server should listen on port 1245
-It should return plain text
-When the URL path is ```/```, it should display Hello Holberton School! in the page body
-When the URL path is ```/students```, it should display ```This is the list of our students``` followed by the same content as the file ```3-read_file_async.js``` (with and without the database) - the name of the database must be passed as argument of the file
-CSV file can contain empty lines (at the end) - and they are not a valid student!
+* It should be assigned to the variable app and this one must be exported
+* HTTP server should listen on port 1245
+* It should return plain text
+* When the URL path is ```/```, it should display Hello Holberton School! in the page body
+* When the URL path is ```/students```, it should display ```This is the list of our students``` followed by the same content as the file ```3-read_file_async.js``` (with and without the database) - the name of the database must be passed as argument of the file
+* CSV file can contain empty lines (at the end) - and they are not a valid student!
 
 ```Terminal 1:```
 
@@ -387,9 +387,9 @@ bob@dylan:~$
 ## ```6. Create a small HTTP server using Express (mandatory)```
 Install Express and in a file named ```6-http_express.js```, create a small HTTP server using Express module:
 
-It should be assigned to the variable ```app``` and this one must be exported
-HTTP server should listen on port 1245
-Displays ```Hello Holberton School!``` in the page body for the endpoint ```/```
+* It should be assigned to the variable ```app``` and this one must be exported
+* HTTP server should listen on port 1245
+* Displays ```Hello Holberton School!``` in the page body for the endpoint ```/```
 
 ```In terminal 1:```
 
